@@ -1,0 +1,28 @@
+{
+	"name": "收藏云-私人",
+	"version": "1.0",
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"tabs",
+		"contextMenus",
+		"notifications",
+		"bookmarks"
+	],
+	"content_scripts":[
+		{
+      "matches": ["http://www.xinqianduan.com/*","http://striblog.com/*"],
+      "js": ["myscript.js"]
+		},
+		{	
+			"matches": ["http://*/*"],
+			"js": ["simpleScript.js"]
+		}
+	],
+	"manifest_version": 2,
+	"icons":{
+		"16":"icon4.png",
+		"48":"icon48.png"
+	}
+}
